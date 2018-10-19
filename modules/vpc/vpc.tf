@@ -1,7 +1,9 @@
 # vpc.tf
 
 provider "aws" {
-  region = "${var.region}"
+  region                  = "${var.region}"
+  shared_credentials_file = "~/.aws/creds"
+  profile                 = "made2591-terraform"
 }
 
 # The configuration for this backend will be filled in by Terragrunt
@@ -62,7 +64,7 @@ resource "aws_subnet" "public-subnet" {
   count             = "${length(var.availability_zones)}"
   vpc_id            = "${aws_vpc.vpc.id}"
   cidr_block        = "${element(var.cidr_public_blocks, count.index)}"
-  availability_zones = "${var.region}${element(var.availability_zones, count.index)}"
+  availability_zone = "${var.region}${element(var.availability_zones, count.index)}"
 
   tags = "${merge(var.default_tags, map(
     "Name", "${var.env}-public-subnet-az-${element(var.availability_zones, count.index)}",
@@ -74,8 +76,8 @@ resource "aws_subnet" "public-subnet" {
 resource "aws_subnet" "private-subnet" {
   count  = "${length(var.availability_zones)}"
   vpc_id = "${aws_vpc.vpc.id}"
-  cidr_block        = "${element(var.cidr_private_blocks, count.index)}"
-  availability_zones = "${var.region}${element(var.availability_zones, count.index)}"
+  cidr_block         = "${element(var.cidr_private_blocks, count.index)}"
+  availability_zone = "${var.region}${element(var.availability_zones, count.index)}"
 
   tags = "${merge(var.default_tags, map(
     "Name", "${var.env}-private-subnet-az-${element(var.availability_zones, count.index)}",

@@ -23,6 +23,6 @@ terragrunt = {
 }
 
 remote_state_profile = "made2591-terraform"
-remote_state_key_vpc = "vpc/terraform.tfstate"
-remote_state_key_security_group = "security_group/terraform.tfstate"
+remote_state_key_vpc = "dev/vpc/terraform.tfstate"
+remote_state_key_security_group = "dev/security_group/terraform.tfstate"
 remote_state_bucket  = "made2591.terraform"

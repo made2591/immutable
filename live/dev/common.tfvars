@@ -6,6 +6,6 @@ default_tags = {
   "Tool"            = "Terraform"
   "Scope"           = "VPC"
 }
-cidr_block = "10.20.0.0/16"
-cidr_public_blocks = ["10.20.40.0/20", "10.20.60.0/20"]
-cidr_private_blocks = ["10.20.50.0/20", "10.20.70.0/20"]
+cidr_block = "172.16.0.0/22"
+cidr_public_blocks = ["172.16.0.0/26", "172.16.0.64/26"]
+cidr_private_blocks = ["172.16.0.128/26", "172.16.0.192/26"]

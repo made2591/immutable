@@ -24,7 +24,7 @@ resource "aws_security_group" "ssh-sg" {
   name = "${var.env}-ssh-sg"
   description = "Security group to enable ssh"
   
-  vpc_id = "${data.terraform_remote_state.vpc.id_vpc}"
+  vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
 
   ingress {
     from_port   = 22

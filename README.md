@@ -31,6 +31,12 @@ The state is mantained preserved across different keys using the built-in ```pat
 
 Enjoy and extend!
 
+## Run it
+
+- Change the ```terraform.tfvars``` file in the ```live``` folder accordingly.
+- Go to one of the stage folder. To plan, run ```terragrunt plan-all```
+
+
 ## Thanks
 
 Many thanks to

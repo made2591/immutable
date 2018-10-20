@@ -17,5 +17,3 @@ terragrunt = {
   }
 
 }
-
-remote_state_key_vpc = "dev/vpc/terraform.tfstate"

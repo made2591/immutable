@@ -2,8 +2,8 @@
 
 provider "aws" {
   region                  = "${var.region}"
-  shared_credentials_file = "~/.aws/creds"
-  profile                 = "made2591-terraform"
+  shared_credentials_file = "${var.aws_credentials_path}"
+  profile                 = "${var.remote_state_profile}"
 }
 
 # The configuration for this backend will be filled in by Terragrunt

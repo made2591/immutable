@@ -28,11 +28,6 @@ variable default_tags {
   description= "Tags to propagate to every resource"
 }
 
-variable cidr_block {
-  type = "string"
-  description= "The VPC cidr block"
-}
-
 variable remote_state_bucket {
   type = "string"
   description= "The environment for deployment"
@@ -40,5 +35,25 @@ variable remote_state_bucket {
 
 variable remote_state_key_vpc {
   type = "string"
-  description= "The environment for deployment"
+  description= "The remote state of the VPC resource"
+}
+
+variable remote_state_key_security_group {
+  type = "string"
+  description= "The remote state of the security groups"
+}
+
+variable jenkins_instance_ami {
+  type = "string"
+  description= "The jenkins instance ami id"
+}
+
+variable jenkins_instance_family {
+  type = "string"
+  description= "The jenkins instance family"
+}
+
+variable private_key_path {
+  type = "string"
+  description= "The ssh private key used by ansible to configure the machine"
 }

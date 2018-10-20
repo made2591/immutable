@@ -28,17 +28,7 @@ variable default_tags {
   description= "Tags to propagate to every resource"
 }
 
-variable cidr_block {
+variable jenkins_public_key {
   type = "string"
-  description= "The VPC cidr block"
-}
-
-variable remote_state_bucket {
-  type = "string"
-  description= "The environment for deployment"
-}
-
-variable remote_state_key_vpc {
-  type = "string"
-  description= "The environment for deployment"
+  description= "The public key for the jenkins keypair"
 }

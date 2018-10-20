@@ -6,5 +6,5 @@
 *.tfstate.*
 
 # .tfvars files
-*.tfvars
 .DS_Store
+.terragrunt-cache

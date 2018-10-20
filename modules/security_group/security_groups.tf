@@ -13,9 +13,9 @@ provider "aws" {
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config {
-    bucket = "${var.remote_state_bucket}"
-    region = "${var.region}"
-    key = "${var.remote_state_key_vpc}"
+    bucket  = "${var.remote_state_bucket}"
+    region  = "${var.region}"
+    key     = "${var.remote_state_key_vpc}"
     profile = "${var.remote_state_profile}"
   }
 }
@@ -24,7 +24,7 @@ resource "aws_security_group" "ssh-sg" {
   name = "${var.env}-ssh-sg"
   description = "Security group to enable ssh"
   
-  vpc_id = "${data.terraform_remote_state.vpc.id}"
+  vpc_id = "${data.terraform_remote_state.vpc.id_vpc}"
 
   ingress {
     from_port   = 22

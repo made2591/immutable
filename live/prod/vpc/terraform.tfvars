@@ -18,4 +18,4 @@ terragrunt = {
 
 }
 
-remote_state_key_vpc = "vpc/terraform.tfstate"
+remote_state_key_vpc = "prod/vpc/terraform.tfstate"

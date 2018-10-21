@@ -30,7 +30,7 @@ resource "aws_security_group" "ssh-sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["${var.cidr_block}"]
+    cidr_blocks = ["192.71.172.3/32"]
   }
 
   egress {
@@ -57,7 +57,14 @@ resource "aws_security_group" "jenkins-sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["${var.cidr_block}"]
+    cidr_blocks = ["192.71.172.3/32"]
+  }
+
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["192.71.172.3/32"]
   }
 
   egress {

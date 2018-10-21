@@ -27,4 +27,4 @@ remote_state_key_security_group = "dev/security_group/terraform.tfstate"
 
 jenkins_instance_ami            = "ami-0c21ae4a3bd190229"
 jenkins_instance_family         = "t2.micro"
-private_key_path                = "./id_rsa.pem"
+jenkins_private_key                = "~/.ssh/id_rsa.pem"

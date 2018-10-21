@@ -38,7 +38,7 @@
         enabled: true
 
     - name: init password jenkin
-      shell: cat /var/lib/jenkins/secrets/initialAdminPassword
+      shell: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
       changed_when: false
       register: result
 

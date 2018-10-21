@@ -37,12 +37,12 @@ resource "random_shuffle" "selected_public_subnet" {
 
 resource "aws_instance" "jenkins_master" {
     # Use an Ubuntu image in eu-west-1
-    ami = "${var.jenkins_instance_ami}"
+    ami           = "${var.jenkins_instance_ami}"
     instance_type = "${var.jenkins_instance_family}"
 
     # We're assuming the subnet and security group have been defined earlier on
-    subnet_id = "${random_shuffle.selected_public_subnet.result[0]}"
-    vpc_security_group_ids = ["${data.terraform_remote_state.security_group.jenkins_sg}"]
+    subnet_id                   = "${random_shuffle.selected_public_subnet.result[0]}"
+    vpc_security_group_ids      = ["${data.terraform_remote_state.security_group.jenkins_sg}"]
     associate_public_ip_address = true
 
     # We're assuming there's a key with this name already
@@ -53,13 +53,13 @@ resource "aws_instance" "jenkins_master" {
       connection {
         type        = "ssh"
         user        = "ec2-user"
-        private_key = "${file(var.private_key_path)}"
+        private_key = "${file(var.jenkins_private_key)}"
       }
     }
 
     # This is where we configure the instance with ansible-playbook
     provisioner "local-exec" {
-      command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ec2-user -i '${self.public_ip},' --private-key ${var.private_key_path} master.yaml" 
+      command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ec2-user -i '${self.public_ip},' --private-key ${var.jenkins_private_key} master.yaml" 
     }
 
     tags = "${merge(var.default_tags, map(

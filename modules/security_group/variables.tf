@@ -1,16 +1,16 @@
 variable env {
   type = "string"
-  description= "The environment for deployment"
+  description= "The environment of deployment"
 }
 
 variable region {
   type = "string"
-  description= "The region used"
+  description= "The region used for deployment"
 }
 
 variable remote_state_profile {
   type = "string"
-  description= "The profile to use inside credential for state retrieval and provider"
+  description= "The credential profile to use for by AWS provider and remote state"
 }
 
 variable aws_credentials_path {
@@ -20,12 +20,7 @@ variable aws_credentials_path {
 
 variable default_tags {
   type = "map"
-  default = {
-      "ProjectName"     = "ApplicationName"
-      "Tool"            = "Terraform"
-      "Scope"           = "Learning"
-  }
-  description= "Tags to propagate to every resource"
+  description= "The set of tags to propagate to every resource"
 }
 
 variable cidr_block {
@@ -35,10 +30,10 @@ variable cidr_block {
 
 variable remote_state_bucket {
   type = "string"
-  description= "The environment for deployment"
+  description= "The s3 bucket used by terraform to store remote state"
 }
 
 variable remote_state_key_vpc {
   type = "string"
-  description= "The environment for deployment"
+  description= "The s3 prefix used by terraform to store remote state of VPC"
 }

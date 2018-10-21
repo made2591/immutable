@@ -1,6 +1,6 @@
 terragrunt = {
   terraform {
-    source = "github.com/made2591/my-terragrunt/modules/jenkins"
+    source = "github.com/made2591/immutable/infrastructure/modules/jenkins"
 
     extra_arguments "vars_loading" {
       commands  = ["${get_terraform_commands_that_need_vars()}"]
@@ -22,9 +22,9 @@ terragrunt = {
 
 }
 
-remote_state_key_vpc            = "dev/vpc/terraform.tfstate"
-remote_state_key_security_group = "dev/security_group/terraform.tfstate"
+remote_state_key_vpc            = "prod/vpc/terraform.tfstate"
+remote_state_key_security_group = "prod/security_group/terraform.tfstate"
 
-jenkins_instance_ami            = "ami-0c21ae4a3bd190229"
+jenkins_instance_ami            = "ami-f95ef58a"
 jenkins_instance_family         = "t2.micro"
 jenkins_private_key                = "~/.ssh/id_rsa.pem"

@@ -1,6 +1,6 @@
 terragrunt = {
   terraform {
-    source = "github.com/made2591/my-terragrunt/modules/keypair"
+    source = "github.com/made2591/immutable/infrastructure/modules/security_group"
 
     extra_arguments "vars_loading" {
       commands  = ["${get_terraform_commands_that_need_vars()}"]
@@ -16,6 +16,10 @@ terragrunt = {
     path = "${find_in_parent_folders()}"
   }
 
+  dependencies {
+    paths = ["../vpc"]
+  }
+
 }
 
-jenkins_public_key = "${file("~/.ssh/id_rsa.pub")}"
+remote_state_key_vpc = "prod/vpc/terraform.tfstate"

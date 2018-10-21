@@ -1,6 +1,6 @@
 terragrunt = {
   terraform {
-    source = "github.com/made2591/my-terragrunt/modules/security_group"
+    source = "github.com/made2591/immutable/infrastructure/modules/vpc"
 
     extra_arguments "vars_loading" {
       commands  = ["${get_terraform_commands_that_need_vars()}"]
@@ -16,10 +16,4 @@ terragrunt = {
     path = "${find_in_parent_folders()}"
   }
 
-  dependencies {
-    paths = ["../vpc"]
-  }
-
 }
-
-remote_state_key_vpc = "prod/vpc/terraform.tfstate"

@@ -1,6 +1,6 @@
 terragrunt = {
   terraform {
-    source = "github.com/made2591/my-terragrunt/modules/vpc"
+    source = "github.com/made2591/immutable/infrastructure/modules/keypair"
 
     extra_arguments "vars_loading" {
       commands  = ["${get_terraform_commands_that_need_vars()}"]
@@ -17,3 +17,5 @@ terragrunt = {
   }
 
 }
+
+jenkins_public_key = "${file("~/.ssh/id_rsa.pub")}"

@@ -1,11 +1,10 @@
-# my-terragrunt
+# immutable
 
-My personal terragrunt configuration.
+**immutable** represents my best implementation of an immutable repository. You can get more information [here](#).
 
 ## Requirements
 
-- [terraform](https://github.com/hashicorp/terraform)
-- [terragrunt](https://github.com/gruntwork-io/terragrunt)
+- [docker](https://www.docker.com/)
 
 ## Description
 
@@ -40,5 +39,7 @@ Enjoy and extend!
 ## Thanks
 
 Many thanks to
+- [ansible](https://github.com/ansible/ansible)
+- [packer](https://github.com/hashicorp/packer)
 - [terraform](https://github.com/hashicorp/terraform)
 - [terragrunt](https://github.com/gruntwork-io/terragrunt)

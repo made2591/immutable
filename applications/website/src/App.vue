@@ -12,10 +12,9 @@
                 <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
                     A fully immutable and opinionated repository.
                 </p>
-                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-black-outline display-4" href="index.html#form1-2">
+                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-black-outline display-4" href="https://github.com/made2591/immutable">
                         GITHUB</a>
-                    <a class="btn btn-md btn-black-outline display-4" href="index.html#form1-2">
-                        CONTACT ME</a></div>
+                <a class="btn btn-md btn-black-outline display-4" href="mailto:matteo.madeddu@gmail.com">CONTACT ME</a></div>
             </div>
         </div>
     </div>
@@ -31,7 +30,7 @@
                 <div class="card-box">
                     <h4 class="card-title py-3 mbr-fonts-style display-5">dfsd</h4>
                     <p class="mbr-text mbr-fonts-style display-7">
-                        Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you like.
+                        Made with love
                     </p>
                 </div>
             </div>
@@ -44,7 +43,7 @@
                     <h4 class="card-title py-3 mbr-fonts-style display-5">
                         Festival Music</h4>
                     <p class="mbr-text mbr-fonts-style display-7">
-                        All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.
+                        Play your world
                     </p>
                 </div>
             </div>
@@ -56,7 +55,7 @@
                 <div class="card-box">
                     <h4 class="card-title py-3 mbr-fonts-style display-5">Please Share</h4>
                     <p class="mbr-text mbr-fonts-style display-7">
-                        Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible.
+                        Extend it easily
                     </p>
                 </div>
             </div>
@@ -69,11 +68,10 @@
         <div class="media-container-row">
             <div class="title col-12 col-md-8">
                 <h2 class="align-center pb-3 mbr-fonts-style display-1">
-                    MUSIC</h2>
+                    IDEA</h2>
                 <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
-                    Shape your future web project with sharp design and refine coded functions.
+                    Shape your future web project in a secure, immutable, opinionated environment
                 </h3>
-
             </div>
         </div>
     </div>
@@ -85,10 +83,10 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="mbr-white col-md-10">
-                <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-1"><span style="font-weight: normal;">Steel Jam</span></h1>
+                <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-1"><span style="font-weight: normal;">Tommy Tynjä</span></h1>
 
                 <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
-                    Full width intro with adjustable height, background image and a color overlay. Click any text to edit or style it.
+                    To successfully implement continuous delivery, you need to change the culture of how an entire organization views software development efforts.
                 </p>
 
             </div>
@@ -102,12 +100,12 @@
             <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/mbr-4-1620x1080.jpg" alt="Mobirise" title="" media-simple="true">
+                        <img src="../static/assets/images/mbr-4-1620x1080.jpg" alt="Mobirise" title="" media-simple="true">
                     </div>
                     <div class="card-box">
-                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Under Cat</h4>
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Scott Hanselman</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you like.</p>
+                            The most powerful tool we have as developers is automation.</p>
                     </div>
                 </div>
             </div>
@@ -115,12 +113,12 @@
             <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/mbr-5-1620x1080.jpg" alt="Mobirise" title="" media-simple="true">
+                        <img src="../static/assets/images/mbr-5-1620x1080.jpg" alt="Mobirise" title="" media-simple="true">
                     </div>
                     <div class="card-box ">
-                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Christian Dark</h4>
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Jeff Sussna</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.</p>
+                            The key to following the continuous delivery path is to continually question your own assumptions about what’s possible.</p>
                     </div>
                 </div>
             </div>
@@ -128,12 +126,12 @@
             <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/mbr-6-1620x1080.jpg" alt="Mobirise" title="" media-simple="true">
+                        <img src="../static/assets/images/mbr-6-1620x1080.jpg" alt="Mobirise" title="" media-simple="true">
                     </div>
                     <div class="card-box">
-                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Light Dilemma</h4>
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Gene Kim</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible</p>
+                            Currently, DevOps is more like a philosophical movement, not yet a precise collection of practices, descriptive or prescriptive.</p>
                     </div>
                 </div>
             </div>
@@ -148,9 +146,9 @@
             <div class="media-container-row">
                 <div class="col-12 align-center">
                     <h2 class="mbr-section-title pb-3 mbr-fonts-style display-1">
-                        Our partners</h2>
+                        Believes</h2>
                     <h3 class="mbr-section-subtitle mbr-light mbr-fonts-style display-5">
-                        Click any image to change it.Click blue "Gear" icon in the top right corner to change background, amount slides and amount visible items at once.
+                        DRY, immutable, opinionated, agnostic
                     </h3>
                 </div>
             </div>
@@ -162,7 +160,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/1.png" class="img-responsive clients-img" media-simple="true">
+                                <img src="../static/assets/images/1.png" class="img-responsive clients-img" media-simple="true">
                             </div>
                         </div>
                     </div>
@@ -170,7 +168,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/2.png" class="img-responsive clients-img" media-simple="true">
+                                <img src="../static/assets/images/2.png" class="img-responsive clients-img" media-simple="true">
                             </div>
                         </div>
                     </div>
@@ -178,7 +176,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/3.png" class="img-responsive clients-img" media-simple="true">
+                                <img src="../static/assets/images/3.png" class="img-responsive clients-img" media-simple="true">
                             </div>
                         </div>
                     </div>
@@ -186,7 +184,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/4.png" class="img-responsive clients-img" media-simple="true">
+                                <img src="../static/assets/images/4.png" class="img-responsive clients-img" media-simple="true">
                             </div>
                         </div>
                     </div>
@@ -194,7 +192,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/5.png" class="img-responsive clients-img" media-simple="true">
+                                <img src="../static/assets/images/5.png" class="img-responsive clients-img" media-simple="true">
                             </div>
                         </div>
                     </div>
@@ -213,30 +211,6 @@
     </div>
 </section>
 
-<section class="mbr-section content4 cid-qx4yz3IFDf" id="content4-5" data-rv-view="324">
-    <div class="container">
-        <div class="media-container-row">
-            <div class="title col-12 col-md-8">
-                <h2 class="align-center pb-3 mbr-fonts-style display-1">
-                    Find us</h2>
-                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
-                    Shape your future web project with sharp design and refine coded functions.
-                </h3>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="map2 cid-qx4ynbA0wJ" id="map2-4" data-rv-view="326">
-    <div class="container">
-        <div class="media-container-row">
-            <div class="col-md-8">
-                <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJn6wOs6lZwokRLKy1iqRcoKw" allowfullscreen=""></iframe></div>
-        </div>
-    </div>
-</div></section>
-
 <section class="mbr-section info2 cid-qx57E86wAs mbr-parallax-background" id="info2-g" data-rv-view="328">
     <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(37, 170, 178);">
     </div>
@@ -246,8 +220,8 @@
 
             </div>
             <div class="media-container-column title col-12 col-lg-7 col-md-6">
-                <h2 class="align-right mbr-bold mbr-white pb-3 mbr-fonts-style display-2"><span style="font-weight: normal;">#MEGACOOLFEST2049</span></h2>
-                <h3 class="mbr-section-subtitle align-right mbr-light mbr-white mbr-fonts-style display-5">Use our hashtag to share and explore photos on Instagram.</h3>
+                <h2 class="align-right mbr-bold mbr-white pb-3 mbr-fonts-style display-2"><span style="font-weight: normal;">#IMMUTABLE</span></h2>
+                <h3 class="mbr-section-subtitle align-right mbr-light mbr-white mbr-fonts-style display-5">Contribute with pull request</h3>
             </div>
         </div>
     </div>
@@ -258,7 +232,7 @@
         <div class="col-md-12">
             <div class="media-container-row">
                 <div class="mbr-figure" style="width: 50%;">
-                    <img src="assets/images/mbr-721x1080.jpg" alt="Mobirise" title="" media-simple="true">
+                    <img src="../static/assets/images/mbr-721x1080.jpg" alt="Mobirise" title="" media-simple="true">
                 </div>
                 <div class=" align-left">
                     <h2 class="mbr-title pt-2 mbr-fonts-style display-1">

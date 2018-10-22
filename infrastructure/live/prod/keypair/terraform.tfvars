@@ -18,4 +18,4 @@ terragrunt = {
 
 }
 
-jenkins_public_key = "${file("~/.ssh/id_rsa.pub")}"
+jenkins_public_key="~/.ssh/id_rsa.pub"

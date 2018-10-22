@@ -1,0 +1,63 @@
+{
+  "variables": {
+    "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+    "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+    "aws_region": "{{env `AWS_REGION`}}",
+    "ami_name": "{{env `BUILD_AMI_NAME`}}"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "{{user `aws_region`}}",
+      "source_ami_filter": {
+        "filters": {
+          "virtualization-type": "hvm",
+          "architecture": "x86_64",
+          "name": "amzn-ami-hvm-*",
+          "block-device-mapping.volume-type": "gp2",
+          "root-device-type": "ebs"
+        },
+        "owners": ["amazon"],
+        "most_recent": true
+      },
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "{{user `ami_name`}}",
+      "tags": {
+        "Name": "{{user `ami_name`}}",
+        "Packer": "true"
+      },
+      "run_tags": { 
+        "Name": "{{user `ami_name`}}",
+        "Packer": "true"
+      },
+      "ami_description": "AWS AMI Linux Bastion Image"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+          "sudo pip install ansible"
+      ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "ansible/playbook.yaml",
+      "role_paths": [
+        "ansible/roles/common",
+        "ansible/roles/clamav"
+      ],
+      "playbook_dir": "ansible",
+      "galaxy_file": "ansible/requirements.yaml"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "rm .ssh/authorized_keys ; sudo rm /root/.ssh/authorized_keys"
+      ]
+    }
+  ]
+}

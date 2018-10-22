@@ -1,0 +1,13 @@
+---
+
+clamav_packages:
+  - clamav # for manual usage
+  - clamav-update
+  - clamd # for running clamav as daemon
+  # - clamav-freshclam # will installed anyway as dependency
+
+# Update virus signatures database each time role runs
+clamav_fresh: true
+
+
+

@@ -1,0 +1,30 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: true
+  become: yes
+
+  roles:
+  - role: common
+  - role: clamav
+  - role: dev-sec.os-hardening
+    os_ignore_users: ['ec2-user']
+  - role: dharrisio.aws-cloudwatch-logs-agent
+    logs:
+    - file: /var/log/messages
+      format: "%b %d %H:%M:%S"
+      group_name: messages
+    - file: /var/log/cron
+      format: "%b %d %H:%M:%S"
+      group_name: cron
+    - file: /var/log/secure
+      format: "%b %d %H:%M:%S"
+      group_name: secure
+    - file: /var/log/maillog
+      format: "%b %d %H:%M:%S"
+      group_name: maillog
+    - file: /var/log/audit/audit.log
+      group_name: audit
+    - file: /var/log/clamd.scan
+      format: "%b %d %H:%M:%S"
+      group_name: clamav

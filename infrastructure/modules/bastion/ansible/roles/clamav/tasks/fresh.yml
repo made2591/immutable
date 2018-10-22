@@ -1,0 +1,5 @@
+---
+
+- name: ClamAv | Update database
+  shell: >
+    freshclam

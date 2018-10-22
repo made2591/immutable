@@ -1,0 +1,26 @@
+---
+
+- include: packages.yml
+
+- name: Copy the freshclam.conf template file to /etc/freshclam.conf
+  template: src=freshclam.conf.j2 dest=/etc/freshclam.conf
+  when: "'clamav-update' in clamav_packages"
+
+- name: Copy the clamd.conf template file to /etc/clamd.conf
+  template: src=clamd.conf.j2 dest=/etc/clamd.conf
+
+- name: Copy the scan.conf template file to /etc/clamd.d/scan.conf
+  template: src=scan.conf.j2 dest=/etc/clamd.d/scan.conf
+
+- name: Start clamd.scan service
+  service:
+    name: clamd.scan
+    state: started
+
+- name: Set up cronjob to run clamav nightly
+  cron: name="Nightly AV Scan" job="/usr/bin/clamscan -i /"  hour="12" minute=" {{ 59 |random }} "
+
+- name: Set up cronjob to run freshclam which needs to run before clamav
+  cron: name="Nightly AV update" job="/usr/bin/freshclam"  hour="10" minute=" {{ 59 |random }} "
+
+

@@ -1,0 +1,5 @@
+node {
+    checkout scm
+    def customImage = docker.build("made25/immutable-frontend:${env.BUILD_ID}")
+    customImage.push()
+}

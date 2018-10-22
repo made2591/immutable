@@ -23,7 +23,7 @@ data "terraform_remote_state" "vpc" {
 resource "aws_security_group" "ssh-sg" {
   name = "${var.env}-ssh-sg"
   description = "Security group to enable ssh"
-  
+
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
 
   ingress {
@@ -50,7 +50,7 @@ resource "aws_security_group" "ssh-sg" {
 resource "aws_security_group" "jenkins-sg" {
   name = "${var.env}-jenkins-sg"
   description = "Security group to let jenkins work and let work with jenkins"
-  
+
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
 
   ingress {
@@ -63,6 +63,13 @@ resource "aws_security_group" "jenkins-sg" {
   ingress {
     from_port   = 8080
     to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["192.71.172.3/32"]
+  }
+
+  ingress {
+    from_port   = 50000
+    to_port     = 50000
     protocol    = "tcp"
     cidr_blocks = ["192.71.172.3/32"]
   }

@@ -12,5 +12,5 @@ provider "aws" {
 }
 resource "aws_key_pair" "jenkins" {
   key_name   = "${var.env}-jenkins-keypair"
-  public_key = "${var.jenkins_public_key}"
+  public_key = "${file(var.jenkins_public_key)}"
 }

@@ -57,3 +57,8 @@ variable jenkins_private_key {
   type = "string"
   description= "The ssh private key used by ansible to configure the machine"
 }
+
+variable jenkins_backup_s3_bucket_name {
+  type = "string"
+  description= "The ssh private key used by ansible to configure the machine"
+}

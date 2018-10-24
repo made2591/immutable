@@ -13,9 +13,14 @@ variable remote_state_profile {
   description= "The credential profile to use for by AWS provider and remote state"
 }
 
-variable aws_credentials_path {
+variable aws_access_key {
   type = "string"
-  description= "The path of the credentials file in the host system"
+  description= "The aws access key - content"
+}
+
+variable aws_access_secret {
+  type = "string"
+  description= "The aws access secret - content"
 }
 
 variable default_tags {

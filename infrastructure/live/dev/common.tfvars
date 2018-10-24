@@ -12,4 +12,5 @@ cidr_private_blocks = ["172.16.0.128/26"]
 
 remote_state_bucket  = "made2591.terraform"
 remote_state_profile = "made2591-terraform"
-aws_credentials_path = "~/.aws/creds"
+access_key           = "${file("~/.aws/access_key")}"
+secret_key           = "${file("~/.aws/access_secret")}"

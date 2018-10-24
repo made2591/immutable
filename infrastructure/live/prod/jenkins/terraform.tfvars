@@ -25,6 +25,7 @@ terragrunt = {
 remote_state_key_vpc            = "prod/vpc/terraform.tfstate"
 remote_state_key_security_group = "prod/security_group/terraform.tfstate"
 
-jenkins_instance_ami            = "ami-f95ef58a"
+jenkins_instance_ami            = "ami-0c21ae4a3bd190229"
 jenkins_instance_family         = "t2.micro"
-jenkins_private_key                = "~/.ssh/id_rsa.pem"
+jenkins_private_key             = "~/.ssh/id_rsa.pem"
+jenkins_backup_s3_bucket_name   = "made2591.backup.jenkins"

@@ -1,9 +1,10 @@
 # vpc.tf
 
 provider "aws" {
-  region                  = "${var.region}"
-  shared_credentials_file = "${var.aws_credentials_path}"
-  profile                 = "${var.remote_state_profile}"
+  region     = "${var.region}"
+  access_key = "${var.aws_access_key}"
+  secret_key = "${var.aws_secret_key}"
+  profile    = "${var.remote_state_profile}"
 }
 
 # The configuration for this backend will be filled in by Terragrunt

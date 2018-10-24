@@ -13,5 +13,5 @@ cidr_private_blocks = ["172.16.0.128/26", "172.16.0.192/26"]
 
 remote_state_bucket  = "made2591.terraform"
 remote_state_profile = "made2591-terraform"
-access_key           = "${file("~/.aws/access_key")}"
-secret_key           = "${file("~/.aws/access_secret")}"
+aws_access_key       = "${file("~/.aws/access_key")}"
+aws_secret_key       = "${file("~/.aws/access_secret")}"

@@ -18,7 +18,7 @@ variable aws_access_key {
   description= "The aws access key - content"
 }
 
-variable aws_access_secret {
+variable aws_secret_key {
   type = "string"
   description= "The aws access secret - content"
 }

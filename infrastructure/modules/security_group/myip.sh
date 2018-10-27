@@ -1,3 +1,5 @@
 #!/bin/bash
 
-curl ipecho.net/plain ; echo
+IP=$(wget -qO- ipinfo.io/ip)
+
+echo "{ \"ip\": \"${IP}\" }"

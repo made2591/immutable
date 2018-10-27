@@ -22,6 +22,10 @@ data "terraform_remote_state" "vpc" {
   }
 }
 
+data "external" "myip" {
+  program = ["${path.module}/myip.sh"]
+}
+
 resource "aws_security_group" "ssh-sg" {
   name = "${var.env}-ssh-sg"
   description = "Security group to enable ssh"
@@ -32,7 +36,7 @@ resource "aws_security_group" "ssh-sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["192.71.172.3/32"]
+    cidr_blocks = ["${data.external.myip.result.ip}/32"]
   }
 
   egress {
@@ -59,21 +63,21 @@ resource "aws_security_group" "jenkins-sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["192.71.172.3/32"]
+    cidr_blocks = ["${data.external.myip.result.ip}/32"]
   }
 
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["192.71.172.3/32"]
+    cidr_blocks = ["${data.external.myip.result.ip}/32"]
   }
 
   ingress {
     from_port   = 50000
     to_port     = 50000
     protocol    = "tcp"
-    cidr_blocks = ["192.71.172.3/32"]
+    cidr_blocks = ["${data.external.myip.result.ip}/32"]
   }
 
   egress {

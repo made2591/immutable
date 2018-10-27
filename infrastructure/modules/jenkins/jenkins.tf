@@ -43,9 +43,9 @@ resource "random_shuffle" "selected_public_subnet" {
 resource "aws_s3_bucket" "jenkins_backup_s3_bucket_name" {
   bucket                 = "${var.jenkins_backup_s3_bucket_name}"
   acl                    = "private"
-  # lifecycle {
-  #   prevent_destroy = true
-  # }
+  lifecycle {
+    prevent_destroy = true
+  }
 
   tags = "${merge(var.default_tags, map(
     "Name", "${var.env}-jenkins-master-backup-bucket",

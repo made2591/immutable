@@ -9,7 +9,6 @@ terragrunt = {
         "-var-file=terraform.tfvars"
       ]
     }
-
   }
 
   include {

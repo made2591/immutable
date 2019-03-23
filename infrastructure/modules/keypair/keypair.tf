@@ -11,7 +11,8 @@ provider "aws" {
   secret_key = "${var.aws_secret_key}"
   profile    = "${var.remote_state_profile}"
 }
-resource "aws_key_pair" "jenkins" {
-  key_name   = "${var.env}-jenkins-keypair"
-  public_key = "${file(var.jenkins_public_key)}"
+
+resource "aws_key_pair" "bastion" {
+  key_name   = "${var.env}-bastion-keypair"
+  public_key = "${file(var.bastion_public_key)}"
 }

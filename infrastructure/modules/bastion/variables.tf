@@ -28,11 +28,6 @@ variable default_tags {
   description = "The set of tags to propagate to every resource"
 }
 
-variable cidr_block {
-  type        = "string"
-  description = "The VPC cidr block"
-}
-
 variable remote_state_bucket {
   type        = "string"
   description = "The s3 bucket used by terraform to store remote state"
@@ -41,4 +36,19 @@ variable remote_state_bucket {
 variable remote_state_key_vpc {
   type        = "string"
   description = "The s3 prefix used by terraform to store remote state of VPC"
+}
+
+variable remote_state_key_security_group {
+  type        = "string"
+  description = "The s3 prefix used by terraform to store remote state of security groups"
+}
+
+variable bastion_instance_ami {
+  type        = "string"
+  description = "The bastion instance ami id"
+}
+
+variable bastion_instance_family {
+  type        = "string"
+  description = "The bastion instance family"
 }

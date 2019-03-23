@@ -44,12 +44,12 @@ Enjoy and extend!
 
 - Output the values required by the resource that has dependencies;
 - Define in the environment folder the remote state key of the module(s) that contains the resource(s) you have some dependencies with - this is required by the way terragrunt work;
-- Reach the remote state for each module(s) / resource(s) and get the value you need from them using the same output name you define in the first state. To have an example, look at the VPC id output example and how it is propagated to the security group module. The same happens also for the Jenkins EC2 instance.
+- Reach the remote state for each module(s) / resource(s) and get the value you need from them using the same output name you define in the first state. To have an example, look at the VPC id output example and how it is propagated to the security group module. The same happens also for the Bastion EC2 instance.
 
 ##### Inside the modules
 Inside the modules there are many folder:
 
-- ```vpc``` contains the VPC definition, that is nothing more than a standard VPC with *n* subnets, private or public and shared across multiple availabily zone 
+- ```vpc``` contains the VPC definition, that is nothing more than a standard VPC with *n* subnets, private or public and shared across multiple availabily zone
 
 ### Applications
 TODO
@@ -62,7 +62,7 @@ TODO
 
 ## Improvements
 
-- Iter subnets and all involved VPC resources across both the number of avaiability zone and the number 
+- Iter subnets and all involved VPC resources across both the number of avaiability zone and the number
 
 ## Thanks
 Many thanks to

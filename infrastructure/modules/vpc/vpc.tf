@@ -48,10 +48,10 @@ resource "aws_eip" "nat" {
 }
 
 resource "aws_nat_gateway" "nat" {
-  count             = "${length(var.availability_zones)}"
-  allocation_id     = "${element(aws_eip.nat.*.id, count.index)}"
-  subnet_id         = "${element(aws_subnet.public-subnet.*.id, count.index)}"
-  depends_on        = ["aws_internet_gateway.default"]
+  count         = "${length(var.availability_zones)}"
+  allocation_id = "${element(aws_eip.nat.*.id, count.index)}"
+  subnet_id     = "${element(aws_subnet.public-subnet.*.id, count.index)}"
+  depends_on    = ["aws_internet_gateway.default"]
 
   tags = "${merge(var.default_tags, map(
     "Name", "${var.env}-nat-az-${element(var.availability_zones, count.index)}",
@@ -90,9 +90,10 @@ resource "aws_subnet" "private-subnet" {
 # Routing tables for public and private subnets definitions
 resource "aws_route_table" "public" {
   vpc_id = "${aws_vpc.vpc.id}"
+
   route {
-    cidr_block      = "0.0.0.0/0"
-    gateway_id      = "${aws_internet_gateway.default.id}"
+    cidr_block = "0.0.0.0/0"
+    gateway_id = "${aws_internet_gateway.default.id}"
   }
 
   tags = "${merge(var.default_tags, map(
@@ -107,8 +108,8 @@ resource "aws_route_table" "private" {
   vpc_id = "${aws_vpc.vpc.id}"
 
   route {
-    cidr_block      = "0.0.0.0/0"
-    nat_gateway_id  = "${element(aws_nat_gateway.nat.*.id, count.index)}"
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = "${element(aws_nat_gateway.nat.*.id, count.index)}"
   }
 
   tags = "${merge(var.default_tags, map(
@@ -120,18 +121,18 @@ resource "aws_route_table" "private" {
 
 # Routing tables for public and private subnets associations
 resource "aws_route_table_association" "public-subnet" {
-  count              = "${length(var.availability_zones)}"
-  subnet_id          = "${element(aws_subnet.public-subnet.*.id, count.index)}"
-  route_table_id     = "${element(aws_route_table.public.*.id, count.index)}"
+  count          = "${length(var.availability_zones)}"
+  subnet_id      = "${element(aws_subnet.public-subnet.*.id, count.index)}"
+  route_table_id = "${element(aws_route_table.public.*.id, count.index)}"
 }
 
 resource "aws_route_table_association" "private-subnet" {
-  count              = "${length(var.availability_zones)}"
-  subnet_id          = "${element(aws_subnet.private-subnet.*.id, count.index)}"
-  route_table_id     = "${element(aws_route_table.private.*.id, count.index)}"
+  count          = "${length(var.availability_zones)}"
+  subnet_id      = "${element(aws_subnet.private-subnet.*.id, count.index)}"
+  route_table_id = "${element(aws_route_table.private.*.id, count.index)}"
 }
 
 resource "aws_vpc_endpoint" "s3" {
-  vpc_id             = "${aws_vpc.vpc.id}"
-  service_name       = "com.amazonaws.${var.region}.s3"
+  vpc_id       = "${aws_vpc.vpc.id}"
+  service_name = "com.amazonaws.${var.region}.s3"
 }

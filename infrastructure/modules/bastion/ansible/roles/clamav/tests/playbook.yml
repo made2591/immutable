@@ -1,8 +1,0 @@
----
-
-- hosts: all
-  sudo: yes
-  vars:
-    clamav_fresh: false
-  roles:
-    - "../../ansible-role-clamav"
